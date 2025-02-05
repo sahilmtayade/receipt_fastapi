@@ -1,4 +1,4 @@
-from app.models import Receipt, Item
+from app.models import Receipt
 import uuid
 
 from app.services import calculate_points
