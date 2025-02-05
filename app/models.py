@@ -5,7 +5,7 @@ from datetime import datetime
 
 class Item(BaseModel):
     short_description: str = Field(
-        ..., min_length=1, max_length=100, alias="shortDescription"
+        ..., min_length=1, max_length=1000, alias="shortDescription"
     )
     price: float = condecimal(gt=0, decimal_places=2)
 
