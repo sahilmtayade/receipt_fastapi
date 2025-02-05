@@ -1,0 +1,10 @@
+name: receipt_processor
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pydantic
+  - pip:
+      - fastapi
+      - uvicorn
