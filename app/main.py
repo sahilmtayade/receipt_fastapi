@@ -26,10 +26,10 @@ async def process_receipts(receipt: Receipt):
     return {"receipt_id": receipt_id}
 
 
-@app.get("/test_so_far/{receipt_id}")
-async def test_so_far(receipt_id: str):
+@app.get("/receipts/{id}/points")
+async def test_so_far(id: str):
     db: ReceiptDB = app.state.db
-    receipt = db.get_receipt_by_id(receipt_id)
-    if receipt is None:
+    points = db.get_receipt_by_id(id)
+    if points is None:
         raise HTTPException(status_code=404, detail="Receipt not found")
-    return receipt
+    return {"points": points}
