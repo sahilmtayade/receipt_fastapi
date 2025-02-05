@@ -5,6 +5,7 @@ dependencies:
   - python=3.12
   - pip
   - pydantic
+  - pytest
   - pip:
       - fastapi
       - uvicorn
