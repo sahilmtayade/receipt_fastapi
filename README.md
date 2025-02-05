@@ -14,8 +14,8 @@ This is a FastAPI application that processes receipts, calculates points based o
    Clone the repository to your local machine:
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/sahilmtayade/receipt_fastapi.git
+   cd receipt_fastapi
    ```
 
 2. **Build the Docker Image**
