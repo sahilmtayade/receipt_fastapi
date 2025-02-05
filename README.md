@@ -9,8 +9,7 @@ This is a FastAPI application that processes receipts, calculates points based o
 
 ## Setup
 
-1. **Clone the Repository**
-
+1. **Clone the Repository**  
    Clone the repository to your local machine:
 
    ```bash
@@ -18,14 +17,14 @@ This is a FastAPI application that processes receipts, calculates points based o
    cd receipt_fastapi
    ```
 
-2. **Build the Docker Image**
+2. **Build the Docker Image**  
    Build the Docker image using the following command:
 
    ```bash
    docker build -t fastapi-receipt-processor .
    ```
 
-3. **Run the Application**
+3. **Run the Application**  
    Run the application using Docker:
 
    ```bash
