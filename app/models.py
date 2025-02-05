@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, condecimal, field_validator
 
 from datetime import datetime
 
@@ -7,7 +7,7 @@ class Item(BaseModel):
     short_description: str = Field(
         ..., min_length=1, max_length=100, alias="shortDescription"
     )
-    price: str = Field(..., pattern=r"^\d+\.\d{2}$")
+    price: float = condecimal(gt=0, decimal_places=2)
 
     @field_validator("short_description", mode="before")
     @classmethod
@@ -21,7 +21,7 @@ class Receipt(BaseModel):
     purchase_date: datetime = Field(..., alias="purchaseDate")
     purchase_time: datetime = Field(..., alias="purchaseTime")
     items: list[Item]
-    total: str = Field(..., pattern=r"^\d+\.\d{2}$")
+    total: float = condecimal(gt=0, decimal_places=2)
 
     @field_validator("purchase_date", mode="before")
     @classmethod
