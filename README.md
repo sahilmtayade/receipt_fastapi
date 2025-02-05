@@ -1,5 +1,6 @@
 # receipt_fastapi
 
+The purpose of this project is to experiment with and learn the fastapi framework. This includes pydantic validation, lifecycle, and pytest cases.
 This is a FastAPI application that processes receipts, calculates points based on defined rules, and returns the points for a given receipt ID.
 
 ## Requirements
