@@ -19,7 +19,7 @@ async def process_receipts(receipt: Receipt, request: Request):
 
 
 @router.get("/receipts/{id}/points")
-async def test_so_far(id: str, request: Request):
+async def get_points(id: str, request: Request):
     db: ReceiptDB = request.app.state.db
     points = db.get_receipt_by_id(id)
     if points is None:
